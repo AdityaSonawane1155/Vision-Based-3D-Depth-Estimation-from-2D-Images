@@ -11,3 +11,15 @@ The algorithm begins by importing necessary libraries such as os for file system
 To calculate the distance to a detected car, we employ the intrinsic camera matrix and geometric principles. Initially, the coordinates of the detected bounding box representing the car are extracted from the image. Subsequently, the midpoint of the lower bound of this bounding box is computed, serving as the focal point for distance estimation. Utilizing the intrinsic matrix, a 2D homogeneous coordinate vector is constructed to represent this midpoint. By applying the inverse of the intrinsic matrix to this vector, a direction vector from the camera to the midpoint in camera coordinates is derived. This directional vector is then intersected with the ground plane, typically defined at a known height above the ground level (e.g., -1.65 meters), producing a 3D point in space. Finally, the Euclidean distance from the camera to this intersection point on the ground plane is calculated, representing the estimated distance to the detected car. This comprehensive process effectively utilizes the intrinsic camera matrix and geometric reasoning to accurately estimate distances to detected objects in the image.
 
 2.2 Matching Detections with Ground Truth: To match detections with ground truth objects, we calculate the Intersection over Union (IoU) between each detected bounding box and the ground truth bounding boxes. The IoU measures the overlap between two bounding boxes, providing a metric for their similarity. We select the ground truth box with the highest IoU for each detected car, considering it as the matched ground truth object. If the IoU is below a certain threshold, or if no ground truth box is available, we consider the detection as a false positive.
+
+
+
+![Screenshot 2024-07-16 233617](https://github.com/user-attachments/assets/257f0a1b-bb3f-4943-a952-a3560abd628c)
+
+
+![Screenshot 2024-07-16 233629](https://github.com/user-attachments/assets/e3113d29-f242-4c26-95d2-3c829f0e1fe4)
+
+
+![Screenshot 2024-07-16 233646](https://github.com/user-attachments/assets/886b1ef1-d108-4816-b353-858f0c6ae6b9)
+
+
