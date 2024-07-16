@@ -23,3 +23,5 @@ To calculate the distance to a detected car, we employ the intrinsic camera matr
 ![Screenshot 2024-07-16 233646](https://github.com/user-attachments/assets/886b1ef1-d108-4816-b353-858f0c6ae6b9)
 
 
+![Screenshot 2024-07-16 233709](https://github.com/user-attachments/assets/ee9cc3fa-d227-43be-9329-b621f9027324)
+
